@@ -1,12 +1,11 @@
-// my-embico-app/src/pages/results.tsx (제목 수정본)
+// my-embico-app/src/pages/results.tsx (수정본)
 
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head'; // Next.js의 Head 컴포넌트 임포트
-import { useRouter } from 'next/router'; // Next.js 라우터 임포트
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import styles from './results.module.css';
 
-import styles from './results.module.css'; // CSS 모듈 임포트
-
-// --- 기존 인터페이스 및 헬퍼 함수들은 이전 답변과 동일 ---
+// --- 기존 인터페이스 및 헬퍼 함수들은 거의 그대로 사용 ---
 interface Scores {
   EI: number;
   SN: number;
@@ -91,6 +90,11 @@ const getFinalTypeString = (scores: Scores): string => {
   const jp = getResultTypeLetter(scores.JP, 'JP');
   const ab = getResultTypeLetter(scores.AB, 'AB');
   const hl = getResultTypeLetter(scores.HL, 'HL');
+  // const o = scores.O !== undefined ? getResultTypeLetter(scores.O, 'O') : '';
+  // const c = scores.C !== undefined ? getResultTypeLetter(scores.C, 'C') : '';
+  // const em = scores.EM !== undefined ? getResultTypeLetter(scores.EM, 'EM') : '';
+  // let hexacoPart = `${ab}${hl}${o}${c}${em}`.replace(/-{2,}/g, '-').replace(/^-|-$/g, '');
+  // return `${ei}${sn}${tf}${jp}${hexacoPart ? '-' + hexacoPart : ''}`;
   return `${ei}${sn}${tf}${jp}-${ab}${hl}`;
 };
 
@@ -107,6 +111,7 @@ function ResultsPage() {
       dominantTraitLetter: string;
       dominantTraitFullName: string;
       dominantPercentage: number | null;
+      // totalScore: number; // 디버깅용으로 유지 가능
     }[] | null
   >(null);
 
@@ -130,9 +135,12 @@ function ResultsPage() {
         setFinalType(typeString);
 
         const displayResults: typeof dimensionDisplayResults = [];
+        // 정의된 순서대로 표시하기 위해 배열 사용
         const dimensionsOrder: (keyof Scores)[] = ['EI', 'SN', 'TF', 'JP', 'AB', 'HL'];
+        // TODO: O, C, EM 차원이 있다면 dimensionsOrder에 추가
 
         dimensionsOrder.forEach(dimension => {
+          // 해당 차원의 점수와 최대 강도가 없으면 건너뛰기 (선택적 차원 대비)
           if (parsedScores[dimension] === undefined || parsedMaxStrengths[dimension] === undefined) {
             return;
           }
@@ -143,13 +151,17 @@ function ResultsPage() {
           let positivePoleLetter = '';
           let negativePoleLetter = '';
 
+          // 각 차원의 극성 문자 정의 (getResultTypeLetter와 일관성 유지)
           switch (dimension) {
             case 'EI': positivePoleLetter = 'E'; negativePoleLetter = 'I'; break;
-            case 'SN': positivePoleLetter = 'N'; negativePoleLetter = 'S'; break;
+            case 'SN': positivePoleLetter = 'N'; negativePoleLetter = 'S'; break; // N이 Positive
             case 'TF': positivePoleLetter = 'T'; negativePoleLetter = 'F'; break;
             case 'JP': positivePoleLetter = 'J'; negativePoleLetter = 'P'; break;
             case 'AB': positivePoleLetter = 'A'; negativePoleLetter = 'B'; break;
             case 'HL': positivePoleLetter = 'H'; negativePoleLetter = 'L'; break;
+            // case 'O': positivePoleLetter = 'O'; negativePoleLetter = 'C'; break;
+            // case 'C': positivePoleLetter = 'C'; negativePoleLetter = 'U'; break;
+            // case 'EM': positivePoleLetter = 'E'; negativePoleLetter = 'M'; break;
           }
 
           const { percentNegativePole, percentPositivePole } = calculatePercentage(score, maxStrength);
@@ -159,7 +171,7 @@ function ResultsPage() {
           let percentageToDisplay: number | null = null;
 
           if (score === 0) {
-            dominantTraitLetterResult = getResultTypeLetter(score, dimension);
+            dominantTraitLetterResult = getResultTypeLetter(score, dimension); // 예: "E/I"
             dominantTraitFullNameResult = 'Neutral';
             percentageToDisplay = null;
           } else if (score > 0) {
@@ -177,6 +189,7 @@ function ResultsPage() {
             dominantTraitLetter: dominantTraitLetterResult,
             dominantTraitFullName: dominantTraitFullNameResult,
             dominantPercentage: percentageToDisplay,
+            // totalScore: score,
           });
         });
         setDimensionDisplayResults(displayResults);
@@ -191,6 +204,7 @@ function ResultsPage() {
     }
   }, [router.isReady, router.query]);
 
+  // 로딩 또는 오류 메시지 표시
   if (!scores || !maxStrengths || !dimensionDisplayResults || dimensionDisplayResults.length === 0) {
     return (
       <div className={styles.completionContainer}>
@@ -208,14 +222,12 @@ function ResultsPage() {
   return (
     <div className={styles.container}>
       <Head>
-        {/* 브라우저 탭 제목 수정 */}
-        <title>My MBCO Type - Results</title>
+        <title>My EMCO Type - Results</title>
         <meta name="description" content="MBCO Personality Test Results (MBTI + HEXACO)" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      {/* 페이지 상단 제목 수정 */}
-      <h1 className={styles.pageTitle}>My MBCO Type?</h1>
+      <h1 className={styles.pageTitle}>My EMCO Type?</h1>
 
       {finalType && (
         <div className={styles.finalType}>
@@ -236,6 +248,7 @@ function ResultsPage() {
                 </span>
               </>
             ) : (
+              // 중립일 경우 (예: E/I (Neutral))
               <span className={styles.dimensionLabelNeutral}>
                 {result.dominantTraitLetter} ({result.dominantTraitFullName})
               </span>
@@ -248,6 +261,14 @@ function ResultsPage() {
         다시 검사하기 / 홈으로
       </button>
 
+      {/* 디버깅용 데이터 (필요시 주석 해제) */}
+      {/*
+      <div style={{ marginTop: '30px', fontSize: '10px', color: '#777', textAlign: 'left', width: '100%', overflowX: 'auto' }}>
+        <pre>Scores: {JSON.stringify(scores, null, 2)}</pre>
+        <pre>Max Strengths: {JSON.stringify(maxStrengths, null, 2)}</pre>
+        <pre>Display Results: {JSON.stringify(dimensionDisplayResults, null, 2)}</pre>
+      </div>
+      */}
     </div>
   );
 }

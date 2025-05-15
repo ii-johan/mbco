@@ -22,7 +22,7 @@ export const testQuestions: Question[] = [
   // 예시 질문들 (속성을 모두 채운 형태)
   {
     id: 1,
-    text_ko: "미래에 일어날 일들을 예측하거나 계획하는 것을 즐긴다.",
+    text_ko: "나는 미래에 일어날 일들을 예측하거나 계획하는 것을 좋아한다.",
     text_ja: "未来に起こることを予測したり計画したりするのを楽しむ。",
     text_zh: "你享受预测或计划未来会发生的事。",
     text_en: "You enjoy predicting or planning things that will happen in the future.",
@@ -32,7 +32,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 2,
-    text_ko: "파티나 모임에 가면 사람들에게 둘러싸이기보다 조용한 곳에 머무르는 것을 선호한다.",
+    text_ko: "모임에 가면 사람들에게 둘러싸이기보다 조용한 곳에 머무르는 것을 선호한다.",
     text_ja: "パーティーや集まりに行くと、人に囲まれるより静かな場所にいるのを好む。",
     text_zh: "去派对或聚会时，你喜欢待在安静的地方而不是被人围着。",
     text_en: "When you go to parties or gatherings, you prefer staying in a quiet spot rather than being surrounded by people.",
@@ -42,18 +42,18 @@ export const testQuestions: Question[] = [
   },
    {
     id: 3,
-    text_ko: "다른 사람의 의견이나 평가에 크게 신경 쓰지 않는다.",
+    text_ko: "나는 걱정하기보다는 대체로 침착함을 유지하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'A', // 확정된 방향(극성)
   },
   
   {
     id: 4,
-    text_ko: "상대방과 말할 때 대화의 주도권이 나에게 별로 없는 편이다.",
+    text_ko: "대화할 때 나는 주도적으로 말하기보다 주로 들어주는 편이다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -63,7 +63,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 5,
-    text_ko: "결정을 내릴 때 논리와 이성을 중요하게 생각한다.",
+    text_ko: "나는 결정을 내릴 때 사람과의 감정보다는 이성과 논리를 따른다.",
     text_ja: "",
     text_zh: "。",
     text_en: "",
@@ -73,7 +73,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 6,
-    text_ko: "여러 사람들과 함께 어울리는 활동을 즐긴다.",
+    text_ko: "나는 여러 사람들과 함께 어울려서 하는 활동을 즐긴다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -93,7 +93,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 8,
-    text_ko: "구체적이고 현실적인 정보에 집중하는 편이다.",
+    text_ko: "나는 추상적인 생각보다 구체적이고 현실적인 관심사를 선호한다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -103,7 +103,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 9,
-    text_ko: "상징이나 숨겨진 의미를 파악하는데 관심이 많다.",
+    text_ko: "어떤 일의 숨겨진 상징과 의미를 잘 파악한다는 소리를 많이 듣는다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -113,7 +113,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 10,
-    text_ko: "다른 사람을 칭찬하거나 격려하는데 익숙하다.",
+    text_ko: "나는 다른 사람을 칭찬하거나 격려하는데 익숙하다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -123,31 +123,31 @@ export const testQuestions: Question[] = [
   },
   {
     id: 11,
-    text_ko: "돈이나 권력에 크게 욕심이 없다.",
+    text_ko: "나는 조직생활에 얽매이는 것을 답답해하지 않는다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
-    type: 'HEXACO',
-    dimension: 'HL', // 확정된 지표 배분
-    polarity: 'H', // 확정된 방향(극성)
+    type: 'MBTI',
+    dimension: 'JP', // 확정된 지표 배분
+    polarity: 'J', // 확정된 방향(극성)
   },
   {
     id: 12,
-    text_ko: "내가 한 일에 대해 자주 만족하는 편이다.",
+    text_ko: "나는 위험을 감수하기보다는 안전한 길을 선호한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'A', // 확정된 방향(극성)
   },
   {
     id: 13,
-    text_ko: "새로운 도전에 대해 자신감을 가지고 임한다.",
+    text_ko: "나는 새로운 도전에 대해 자신감을 가지고 임한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'A', // 확정된 방향(극성)
   },
@@ -163,17 +163,17 @@ export const testQuestions: Question[] = [
   },
   {
     id: 15,
-    text_ko: "주변의 시선과 평가를 의식하지 않는 편이다.",
+    text_ko: "나는 미래에 대한 불확실성 때문에 종종 불안감을 느낀다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'A', // 확정된 방향(극성)
   },
   {
     id: 16,
-    text_ko: "대화할 때 눈을 거의 피하지 않고 응시한다.",
+    text_ko: "나는 대화할 때 상대방의 눈을 거의 피하지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -183,7 +183,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 17,
-    text_ko: "상황에 따라 융통성있게 행동하는 것을 좋아한다.",
+    text_ko: "나는 계획에 얽매이지 않고 그때그때 상황에 따라 대처하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -191,7 +191,7 @@ export const testQuestions: Question[] = [
     dimension: 'JP', // 확정된 지표 배분
     polarity: 'P', // 확정된 방향(극성)
   },
-  {
+  {   
     id: 18,
     text_ko: "돈과 양심 중에 나는 돈을 택한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
@@ -208,12 +208,11 @@ export const testQuestions: Question[] = [
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
     type: 'HEXACO',
-    dimension: 'HL', // 확정된 지표 배분
-    polarity: 'H', // 확정된 방향(극성)
+    dimension: 'HL', // 확정된 지표 
+    polarity: 'H', // 확정된 방향(극성) 
   },
-  {
-    id: 20,
-    text_ko: "평생 한가지 음식만 먹는다면 넌 뭘 먹을래라고 묻는다면 말하는 그 사람이 좀 이상하게 느껴진다.",
+  { id: 20,
+    text_ko: "친구가 상상력을 발휘해서 질문하면 나는 그 질문이 별로 흥미롭지 않을 때가 많다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -223,7 +222,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 21,
-    text_ko: "천천히 여유부리다 마감시간에 쫓겨 부랴부랴 일한다.",
+    text_ko: "나는 천천히 여유부리다 마감시간에 쫓겨 부랴부랴 일할 때가 많다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -233,17 +232,17 @@ export const testQuestions: Question[] = [
   },
   {
     id: 22,
-    text_ko: "세상 돌아가는 일을 보며 자주 발끈한다.",
+    text_ko: "나는 세상과 인생이 돌아가는 것을 보면서 화가 날 때가 많이 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'B', // 확정된 방향(극성)
   },
   {
     id: 23,
-    text_ko: "남을 돕는 일이라 해도 법을 어긴다는건 용납이 안된다.",
+    text_ko: "친구에게 서운하다는 말을 들어도 나는 별로 서운하지 않다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -253,7 +252,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 24,
-    text_ko: "드라마를 보면서 주인공의 감정에 자주 빠져든다.",
+    text_ko: "나는 드라마를 보면서 종종 주인공의 감정에 푹 빠질 때가 많다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -263,7 +262,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 25,
-    text_ko: "사람들과 떠드는 것보다 혼자 하는 게임이 더 좋다.",
+    text_ko: "나는 사람들과 수다를 떠는 것보다 혼자 조용히 시간을 보내는게 좋다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -273,7 +272,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 26,
-    text_ko: "이해가 안되도 공감은 해줘야지라고 말하면 어이가 없다.",
+    text_ko: "나는 논리적으로 잘 이해가 안되면 쉽게 공감해주지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -283,7 +282,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 27,
-    text_ko: "실수했을 때 바로 인정하는 편이다.",
+    text_ko: "나는 실수했을 때 그 자리에서 바로 인정하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -293,7 +292,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 28,
-    text_ko: "공돈이 생기면 필요한 물건을 사기보다는 여행을 간다.",
+    text_ko: "나는 갑자기 공돈이 생기면 생활용품을 사기보다는 낭만적으로 사용할 것 같다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -303,27 +302,27 @@ export const testQuestions: Question[] = [
   },
   {
     id: 29,
-    text_ko: "어려운 상황이 닥쳐도 긍정적으로 생각하는 편이다.",
+    text_ko: "갑자기 어려운 상황이 닥쳐도 나는 대체로 긍정적으로 생각하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'A', // 확정된 방향(극성)
   },
   {
     id: 30,
-    text_ko: "작은 스트레스 큰 좌절 그게 바로 나다.",
+    text_ko: "나는 작은 스트레스에도 크게 영향을 받을 때가 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'B', // 확정된 방향(극성)
   },
   {
     id: 31,
-    text_ko: "다른 사람 앞에서 발표하면 신바람이 난다.",
+    text_ko: "많은 사람 앞에서 발표할 때 나는 떨리기보다는 의욕이 솟구치는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -333,27 +332,27 @@ export const testQuestions: Question[] = [
   },
   {
     id: 32,
-    text_ko: "나라에 전쟁이 날까봐 걱정을 많이 한다.",
+    text_ko: "실제로 벌어지지 않을 일을 가지고 걱정할 때가 종종 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'B', // 확정된 방향(극성)
   },
   {
     id: 33,
-    text_ko: "새치기 하는 사람은 절대 안봐준다.",
+    text_ko: "남을 뒷담화를 하는 자리에 끼어 있으면 나는 조용히 앉아있지 않고 슬그머니 피한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'HL', // 확정된 지표 배분
     polarity: 'H', // 확정된 방향(극성)
   },
   {
     id: 34,
-    text_ko: "공짜 샘플이라면 되도록 많이 챙기는 편이다.",
+    text_ko: "남을 돕기 위해서라면 법을 살짝 어기는 정도는 괜찮다고 생각한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -363,7 +362,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 35,
-    text_ko: "여행갈 때 치밀한 계획보다 자유롭게 노는게 더 좋다.",
+    text_ko: "나는 여행갈 때 치밀하게 계획을 짜지 않고 그냥 자유롭게 떠나는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -373,7 +372,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 36,
-    text_ko: "친구들한테 독특하다는 말을 자주 듣는 편이다.",
+    text_ko: "친구들한테 독특하다는 말을 들을 정도로 나는 상상력이 풍부하다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -383,17 +382,17 @@ export const testQuestions: Question[] = [
   },
   {
     id: 37,
-    text_ko: "사회에서 나만 도태된다는 생각으로 스트레스를 받는다.",
+    text_ko: "남들에 비해 나만 뒤쳐치고 있다는 생각에 스트레스를 받을 때가 많이 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'B', // 확정된 방향(극성)
   },
   {
     id: 38,
-    text_ko: "직설적으로 말하기보다는 은유적으로 돌려서 말한다.",
+    text_ko: "나는 직설적으로 말하기보다는 은유적으로 돌려서 말하는걸 좋아한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -403,7 +402,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 39,
-    text_ko: "내가 잘하고 칭찬받을 때 간혹 불편하기도 하다.",
+    text_ko: "일을 잘해서 칭찬받고 있는데도 나는 그 상황이 불편할 때가 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -413,7 +412,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 40,
-    text_ko: "나는 세상이 너무 좋아 천국에는 그다지 관심이 없다.",
+    text_ko: "나는 패션과 요리와 운동과 같은 현실적인 관심사를 많이 좋아한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -423,12 +422,13 @@ export const testQuestions: Question[] = [
   },
   {
     id: 41,
-    text_ko: "약속시간에 좀처럼 늦지 않는다.",
+    text_ko: "나는 약속시간에 가끔 늦는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
-    text_zh: "你不太在意别人的意见或评价。",    text_en: "You do not care much about other people's opinions or evaluations.",
+    text_zh: "你不太在意别人的意见或评价。",   
+    text_en: "You do not care much about other people's opinions or evaluations.",
     type: 'MBTI',
     dimension: 'JP', // 확정된 지표 배분
-    polarity: 'J', // 확정된 방향(극성)
+    polarity: 'P', // 확정된 방향(극성)
   },
   {
     id: 42,
@@ -442,7 +442,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 43,
-    text_ko: "일단 한번 뱉은 말이라 할지라도 필요하면 돌이킨다.",
+    text_ko: "일단 한번 뱉은 말이라 할지라도 필요하다면 언제든지 말을 바꿀 수 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -452,7 +452,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 44,
-    text_ko: "다른 사람의 감정을 상하게 할까봐 솔직한 의견을 말하기 망설일 때가 있다.",
+    text_ko: "상대의 감정을 상하게 할까봐 솔직한 의견을 말하기가 어렵다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -462,17 +462,17 @@ export const testQuestions: Question[] = [
   },
   {
     id: 45,
-    text_ko: "나는 미래에 대해 그다지 걱정하지 않는 편이다.",
+    text_ko: "다른 사람의 지지나 격려가 없어도 쉽게 좌절하지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'A', // 확정된 방향(극성)
   },
   {
     id: 46,
-    text_ko: "사랑하는 사람과 함께라면 가난해도 괜찮다.",
+    text_ko: "사랑하는 사람과 함께라면 가난은 크게 문제가 되지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -502,7 +502,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 49,
-    text_ko: "도서관에서 칸막이 자리가 더 좋다.",
+    text_ko: "시끌벅적한 시장보다 조용한 호숫가가 마음이 더 편하다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -512,7 +512,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 50,
-    text_ko: "어떤 일에 대해 판단할 때 느낌보다는 사실을 중시하는 편이다.",
+    text_ko: "나는 본능적인 느낌보다는 직접 경험한 것을 더 신뢰한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -522,7 +522,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 51,
-    text_ko: "차라리 조금 손해보고 마음만은 편한겠다는건 이해가 안된다.",
+    text_ko: "남을 위해 내가 좀 희생해야 된다는 주장은 쉽게 이해가 안된다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -532,17 +532,17 @@ export const testQuestions: Question[] = [
   },
   {
     id: 52,
-    text_ko: "오늘의 일보다 내일의 걱정이 많이 앞선다.",
+    text_ko: "오늘을 즐겁게 살고 내일은 걱정하지 말라는 말이 나에게는 위로가 안된다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'B', // 확정된 방향(극성)
   },
   {
     id: 53,
-    text_ko: "모르는 사람과 말하면 좀 불편하다.",
+    text_ko: "모르는 사람과의 대화는 좀 불편하다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -572,7 +572,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 56,
-    text_ko: "낯선 사람에게 먼저 다가가 말을 거는 것이 어렵지 않다.",
+    text_ko: "낯선 사람이 갑자기 말을 걸어도 당황하지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -586,7 +586,7 @@ export const testQuestions: Question[] = [
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
+    type: 'HEXACO',
     dimension: 'AB', // 확정된 지표 배분
     polarity: 'B', // 확정된 방향(극성)
   },
@@ -612,7 +612,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 60,
-    text_ko: "이론보다 경험을 중시한다.",
+    text_ko: "아이디어의 제공과 실현 중에 나는 실현하는 편에 가깝다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -622,17 +622,17 @@ export const testQuestions: Question[] = [
   },
   {
     id: 61,
-    text_ko: "지금의 나의 성취에 큰 불만이 없다.",
+    text_ko: "지금까지의 나의 성취는 내 능력보다는 주변의 도움이 더 컸다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
-    dimension: 'AB', // 확정된 지표 배분
-    polarity: 'A', // 확정된 방향(극성)
+    type: 'HEXACO',
+    dimension: 'HL', // 확정된 지표 배분
+    polarity: 'H', // 확정된 방향(극성)
   },
   {
     id: 62,
-    text_ko: "진실된 친구 소수가 많은 친구보다 낫다.",
+    text_ko: "진실된 소수의 친구가 즐거운 다수의 친구보다 낫다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -652,7 +652,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 64,
-    text_ko: "변화가 많고 예측하기 어려우면 좀 불안하다.",
+    text_ko: "나는 대부분의 결정을 신속하게 내리는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -662,13 +662,13 @@ export const testQuestions: Question[] = [
   },
   {
     id: 65,
-    text_ko: "친구가 약속 없이 갑자기 만나자고 하면 자주 나간다.",
+    text_ko: "나는 다정하다는 말보다는 무뚝뚝하다는 말을 많이 듣는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
     type: 'MBTI',
-    dimension: 'JP', // 확정된 지표 배분
-    polarity: 'P', // 확정된 방향(극성)
+    dimension: 'TF', // 확정된 지표 배분
+    polarity: 'T', // 확정된 방향(극성)
   },
   {
     id: 66,
@@ -696,13 +696,13 @@ export const testQuestions: Question[] = [
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
-    type: 'MBTI',
-    dimension: 'AB', // 확정된 지표 배분
-    polarity: 'B', // 확정된 방향(극성)
+    type: 'HEXACO',
+    dimension: 'HL', // 확정된 지표 배분
+    polarity: 'L', // 확정된 방향(극성)
   },
   {
     id: 69,
-    text_ko: "항상 웃으며 대화하려고 한다.",
+    text_ko: "항상 웃으면서 대화하려고 한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -712,7 +712,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 70,
-    text_ko: "친구에게 좀 서운하다는 말을 들어도 별로 신경이 쓰이지 않는다.",
+    text_ko: "나는 감정적인 호소에 설득 당하지 않는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -722,7 +722,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 71,
-    text_ko: "조용한 호숫가보다는 시끌벅적한 시장이 즐겁다.",
+    text_ko: "나는 친구들과 하루 종일 놀아도 지치지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -732,7 +732,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 72,
-    text_ko: "어떤 일의 세부사항까지 주의깊게 살피는 편이다.",
+    text_ko: "나는 대부분의 상황을 직접 관리하고 결정하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",

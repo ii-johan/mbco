@@ -1,4 +1,4 @@
-/* my-embico-app/src/pages/test.module.css (수정: 7점 척도 버튼 색상 및 고정 크기/레이아웃) */
+/* my-embico-app/src/pages/test.module.css (구문 오류 수정: flex-direction 속성) */
 
 /* 검사 페이지 전체 컨테이너 */
 .container {
@@ -36,7 +36,7 @@
 
 /* 질문 내용 박스 스타일 (노란색 직사각형) */
 .questionBox {
-    background-color: rgb(237, 220, 182);
+    background-color: #eaeaad;
     color: black;
     padding: 25px 20px;
     border-radius: 10px;
@@ -51,7 +51,7 @@
 }
 
 .questionBox h2 {
-    font-size: 1.3em;
+    font-size: 1.8em;
     font-weight: bold;
     color: black;
     line-height: 1.5;
@@ -65,8 +65,8 @@
     justify-content: center; /* 가로 가운데 정렬 */
     align-items: center; /* 세로 가운데 정렬 */
     flex-wrap: wrap;
-    gap: 9px; /* 버튼들 사이 간격 */
-    margin-top:40x; /* 버튼 그룹 위 수직 간격 증가 */
+    gap: 6px; /* 버튼들 사이 간격 */
+    margin-top: 80px; /* 버튼 그룹 위 수직 간격 증가 */
     margin-bottom: 30px;
     width: 100%;
     max-width: 700px;
@@ -84,13 +84,14 @@
   cursor: pointer;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* 애니메이션 */
   display: flex;
-  flex-direction: column; /* 텍스트 세로 나열 (필요시) */
-  justify-content: center;
-  align-items: center;
+  /* **** 구문 오류 수정: flex-direction을 column으로 설정하고 잘못된 텍스트 제거 **** */
+  flex-direction: column;
+  justify-content: center; /* 세로 가운데 정렬 */
+  align-items: center; /* 가로 가운데 정렬 */
   flex-shrink: 0;
-  /* **** 고정 크기 (모든 버튼 동일) **** */
-  width: 80px; /* 충분한 크기 */
-  height: 80px;
+  /* 고정 크기 (모든 버튼 동일) */
+  width:  90px; /* 충분한 크기 */
+  height: 90px;
   box-sizing: border-box;
   text-align: center;
   /* 텍스트 줄바꿈 및 오버플로우 처리 */
@@ -101,57 +102,54 @@
   font-size: 1em; /* 기본 글자 크기 */
 }
 
-/* **** 버튼 색상 클래스 (value 7부터 1까지) **** */
+/* 버튼 색상 클래스 (value 7부터 1까지) */
 .buttonColor7 { /* 매우 그렇다 (진한 초록) */
-    background-color: #0b520b;
-    border-color: #282a28;
-    color: white; /* 글자색 흰색 */
+    background-color: #02a202;
+    border-color: #080808;
+    color: black; /* 글자색 흰색 */
     font-weight: bold;
 }
-.buttonColor6 { /* 그렇다 (약간 진한초록) */
-    background-color: #147e14;
-    border-color: #171817;
-     color: white;
+.buttonColor6 { /* 그렇다 (초록) */
+    background-color: #01c101;
+    border-color: #141414;
+     color: black;
      font-weight: bold;
 }
-.buttonColor5 { /* 조금 그렇다 (초록) */
-    background-color: #14b114;
-    border-color: #202120;
-     color: white;  /* 흰색 */
-     font-weight: bold;
+.buttonColor5 { /* 조금 그렇다 (연한 초록) */
+    background-color: #03d303;
+    border-color: #0d0e0d;
+     color: black; /* 글자색 검은색 */
+      font-weight: bold;
 }
 .buttonColor4 { /* 모르겠다 (회색) */
-    background-color: #737272;
-    border-color: #201f1f;
-     color: white; 
+    background-color: #585656;
+    border-color: #0e0e0e;
+     color: white;
      font-weight: bold;
 }
 .buttonColor3 { /* 조금 아니다 (연한 주황) */
-    background-color: #b33a06;
-    border-color: #1c1b1b;
-     color: white;
+    background-color: #f79204;
+    border-color: #0b0b0b;
+     color: black;
      font-weight: bold;
 }
 .buttonColor2 { /* 아니다 (주황) */
-    background-color: #7f2006;
-    border-color: #282726;
-     color: white;
+    background-color: #e99700;
+    border-color: #111111;
+     color: black;
      font-weight: bold;
 }
 .buttonColor1 { /* 매우 아니다 (진한 주황) */
-    background-color: #551d05;
-    border-color: #212020;
-     color: white;
+    background-color: #d27502;
+    border-color: #0d0d0d;
+     color: black;
     font-weight: bold;
 }
-/* ******************************************** */
 
 
 /* 선택된 버튼 스타일 */
 .answerButton.selected {
     transform: scale(1.1);
-    /* 선택 시 색상 변경은 각 색상 클래스에 hover/active처럼 추가하거나 여기에 오버라이드 */
-    /* 예: background-color: #ffffff; color: black; */
     border-color: white; /* 선택 시 테두리 흰색 */
 }
 

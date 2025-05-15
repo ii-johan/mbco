@@ -41,8 +41,8 @@ function StartPage() {
 
       {/* 제목 영역 */}
       <div className={styles.title}>
-        {/* 메인 타이틀 텍스트 수정 */}
-        <h1>MBCO TEST</h1>
+        {/* 메인 타이틀 텍스트 */}
+        <h1>EMCO TEST</h1>
         {/* 부제목 텍스트 */}
         <p>MBTI+HEXACO</p>
       </div>

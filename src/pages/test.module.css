@@ -65,7 +65,7 @@
     justify-content: center; /* 가로 가운데 정렬 */
     align-items: center; /* 세로 가운데 정렬 */
     flex-wrap: wrap;
-    gap: 10px; /* 버튼들 사이 간격 */
+    gap: 6px; /* 버튼들 사이 간격 */
     margin-top: 80px; /* 버튼 그룹 위 수직 간격 증가 */
     margin-bottom: 30px;
     width: 100%;
