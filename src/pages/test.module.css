@@ -104,43 +104,43 @@
 
 /* 버튼 색상 클래스 (value 7부터 1까지) */
 .buttonColor7 { /* 매우 그렇다 (진한 초록) */
-    background-color: #9af99a;
+    background-color: #8ce38c;
     border-color: #080808;
     color: black; /* 글자색 흰색 */
     font-weight: bold;
 }
 .buttonColor6 { /* 그렇다 (초록) */
-    background-color: #99f399;
+    background-color: #8ce38c;
     border-color: #141414;
      color: black;
      font-weight: bold;
 }
 .buttonColor5 { /* 조금 그렇다 (연한 초록) */
-    background-color: #9dff9d;
+    background-color: #8ce38c;
     border-color: #0d0e0d;
      color: black; /* 글자색 검은색 */
       font-weight: bold;
 }
 .buttonColor4 { /* 모르겠다 (회색) */
-    background-color: #e199fb;
+    background-color: #5e6263;
     border-color: #0e0e0e;
      color: white;
      font-weight: bold;
 }
 .buttonColor3 { /* 조금 아니다 (연한 주황) */
-    background-color: #e29bf8;
+    background-color: #eac797;
     border-color: #0b0b0b;
      color: black;
      font-weight: bold;
 }
 .buttonColor2 { /* 아니다 (주황) */
-    background-color: #ec9bfa;
-    border-color: #e698f9;
+    background-color: #eac797;
+    border-color: hsl(0, 0%, 1%);
      color: black;
      font-weight: bold;
 }
 .buttonColor1 { /* 매우 아니다 (진한 주황) */
-    background-color: #e2cdb0;
+    background-color: #eac797;
     border-color: #0d0d0d;
      color: black;
     font-weight: bold;
