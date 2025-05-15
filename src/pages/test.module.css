@@ -97,50 +97,50 @@
   /* 텍스트 줄바꿈 및 오버플로우 처리 */
   word-break: break-word;
   overflow-wrap: break-word;
-  padding: 5px; /* 내부 텍스트 패딩 */
+  padding: 8px; /* 내부 텍스트 패딩 */
   line-height: 1.2; /* 줄 간격 */
   font-size: 1em; /* 기본 글자 크기 */
 }
 
 /* 버튼 색상 클래스 (value 7부터 1까지) */
 .buttonColor7 { /* 매우 그렇다 (진한 초록) */
-    background-color: #02a202;
+    background-color: #7be77b;
     border-color: #080808;
     color: black; /* 글자색 흰색 */
     font-weight: bold;
 }
 .buttonColor6 { /* 그렇다 (초록) */
-    background-color: #01c101;
+    background-color: #57bd57;
     border-color: #141414;
      color: black;
      font-weight: bold;
 }
 .buttonColor5 { /* 조금 그렇다 (연한 초록) */
-    background-color: #03d303;
+    background-color: #498d49;
     border-color: #0d0e0d;
      color: black; /* 글자색 검은색 */
       font-weight: bold;
 }
 .buttonColor4 { /* 모르겠다 (회색) */
-    background-color: #585656;
+    background-color: #4a4d48;
     border-color: #0e0e0e;
      color: white;
      font-weight: bold;
 }
 .buttonColor3 { /* 조금 아니다 (연한 주황) */
-    background-color: #f79204;
+    background-color: #93682b;
     border-color: #0b0b0b;
      color: black;
      font-weight: bold;
 }
 .buttonColor2 { /* 아니다 (주황) */
-    background-color: #e99700;
+    background-color: #c79537;
     border-color: #111111;
      color: black;
      font-weight: bold;
 }
 .buttonColor1 { /* 매우 아니다 (진한 주황) */
-    background-color: #d27502;
+    background-color: #f7a540;
     border-color: #0d0d0d;
      color: black;
     font-weight: bold;
