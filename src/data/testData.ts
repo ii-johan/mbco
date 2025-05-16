@@ -53,7 +53,7 @@ export const testQuestions: Question[] = [
   
   {
     id: 4,
-    text_ko: "나는 대화할 때 주도적으로 말하기보다 들어주는 편이다.",
+    text_ko: "대화할 때 주도적으로 말하기보다 들어주는 편이다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -63,7 +63,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 5,
-    text_ko: "나는 상황을 판단할 때 개인적인 감정보다는 객관적인 기준을 적용한다.",
+    text_ko: "상황을 판단할 때 개인적인 감정보다는 객관적인 기준을 적용한다.",
     text_ja: "",
     text_zh: "。",
     text_en: "",
@@ -73,7 +73,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 6,
-    text_ko: "나는 여러 사람들과 함께 어울려서 하는 활동을 즐긴다.",
+    text_ko: "나는 여러 사람들과 함께 어울려서 하는 활동을 좋아한다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -93,7 +93,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 8,
-    text_ko: "미래의 막연한 성공보다 눈 앞의 작은 성과에 더 관심이 간다.",
+    text_ko: "미래의 막연한 성공보다 눈앞의 작은성과에 관심이 간다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -103,7 +103,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 9,
-    text_ko: "어떤 일의 숨겨진 상징과 의미를 잘 파악한다는 소리를 많이 듣는다.",
+    text_ko: "어떤 일의 숨겨진 상징과 의미를 잘 파악한다는 소리를 듣는다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -123,7 +123,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 11,
-    text_ko: "나는 미리미리 준비를 끝내고 마음 편히 있는 것을 좋아한다.",
+    text_ko: "미리미리 준비를 끝내고 마음 편히 있는것을 좋아한다.",
     text_ja: "。",
     text_zh: "。",
     text_en: ".",
@@ -143,7 +143,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 13,
-    text_ko: "주식, 부동산, 코인 등 위험한 투자보다는 저축을 선호한다.",
+    text_ko: "주식,부동산,코인 등 위험한 투자보다는 저축을 선호한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -153,7 +153,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 14,
-    text_ko: "새로운 정보나 기회가 나타나면 기존 계획을 쉽게 변경할 수 있다.",
+    text_ko: "새로운 정보나 기회가 나타나면 기존 계획을 쉽게 변경할수 있다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -173,7 +173,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 16,
-    text_ko: "나는 대화할 때 상대방의 눈을 거의 피하지 않는다.",
+    text_ko: "나는 대화할때 상대방의 눈을 거의 피하지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -232,7 +232,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 22,
-    text_ko: "나는 미래에 대한 막연한 두려움 때문에 새로운 시도를 망설일 때가 많다.",
+    text_ko: "미래에 대한 막연한 두려움 때문에 새로운 시도를 망설일 때가 많다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -242,7 +242,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 23,
-    text_ko: "나는 비판을 할 때 상대방의 기분보다는 정확하고 솔직하게 말하는 편이다.",
+    text_ko: "비판을 할 때 상대방의 기분보다는 정확하고 솔직하게 말하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -262,7 +262,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 25,
-    text_ko: "친구들과 수다를 떠는 것보다 나만의 시간을 보내는게 편하다.",
+    text_ko: "친구들과 수다를 떠는것보다 나만의 시간을 보내는게 편하다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -272,7 +272,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 26,
-    text_ko: "논리적으로 말이 안 되는 주장을 들으면 바로 반박하고 싶어진다.",
+    text_ko: "논리적으로 말이 안되는 주장을 들으면 바로 반박하고 싶어진다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -292,7 +292,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 28,
-    text_ko: "나는 현실적인 문제에 부딪히면 이건 뭔가 큰 의미가 있을거라고 생각하는 편이다.",
+    text_ko: "현실적인 문제에 부딪히면 뭔가 큰 의미가 숨어있을거라 생각한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -322,7 +322,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 31,
-    text_ko: "나는 파티나 모임에서 활발하게 참여하고 분위기를 주도하는 것을 좋아한다.",
+    text_ko: "파티나 모임에서 활발하게 참여하고 분위기를 주도하는 것을 좋아한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -362,7 +362,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 35,
-    text_ko: "여행갈 때 자세한 계획을 짜지 않고 자유롭게 그냥 떠나는 편이다.",
+    text_ko: "여행갈때 자세한 계획을 짜지않고 자유롭게 그냥 떠나는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -392,7 +392,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 38,
-    text_ko: "길을 가다가 특이한 돌을 발견하면 나는 그 돌이 외계행성에서 온 운석일지 모른다고 생각한다.",
+    text_ko: "나는 꿈을 꾸면 꿈에 대한 해석에 푹 빠진다다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -432,7 +432,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 42,
-    text_ko: "다른 사람의 물건을 허락 없이 사용하는 것에 크게 신경쓰지 않는다.",
+    text_ko: "다른 사람의 물건을 허락없이 사용하는 것에 크게 신경쓰지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -472,7 +472,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 46,
-    text_ko: "나는 사람들과 대화할 때 그들이 하는 말의 진짜 속내가 무엇일지 분석하는 편이다.",
+    text_ko: "사람들과 대화할 때 그들이 하는 말의 진짜 속내가 무엇인인지 분석하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -482,7 +482,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 47,
-    text_ko: "눈으로 보지 않으면 잘 믿지 않는 편이다.",
+    text_ko: "눈으로 보지 않으면 잘 믿지 않는다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -532,7 +532,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 52,
-    text_ko: "나는 다른 사람의 부정적인 말에 쉽게 영향을 받고 기분이 상한다.",
+    text_ko: "다른 사람의 부정적인 말에 쉽게 영향을 받고 기분이 상한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -712,7 +712,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 70,
-    text_ko: "나는 논리적인 근거 없이 감정에만 호소하는 주장은 설득력이 없다고 생각한다.",
+    text_ko: "논리적인 근거 없이 감정에만 호소하는 주장은 설득력이 없다고 생각한다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
@@ -732,7 +732,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 72,
-    text_ko: "나는 즉흥적으로 행동하기보다 게획적으로 일을 시작하는 편이다.",
+    text_ko: "즉흥적으로 행동하기보다 계획적으로 일을 시작하는 편이다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
