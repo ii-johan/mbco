@@ -1,4 +1,4 @@
-// my-embico-app/src/pages/test.tsx (수정)
+// my-embico-app/src/pages/test.tsx (변경 없음 - 기존 코드 유지)
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -17,10 +17,10 @@ const scaleLabels = [
   { ko: "No++", ja: "全く違う", zh: "非常不同意", en: "Strongly Disagree" },   // 값 1
   { ko: "No+",  ja: "違う",     zh: "不同意",   en: "Disagree" },          // 값 2
   { ko: "No",   ja: "やや違う", zh: "有点不同意", en: "Slightly Disagree" }, // 값 3
-  { ko: "Mid",  ja: "分からない", zh: "不确定",    en: "Neutral" },           // 값 4
-  { ko: "Yes",  ja: "ややそうだ", zh: "有点同意",  en: "Slightly Agree" },    // 값 5
-  { ko: "Yes+", ja: "そうだ",     zh: "同意",      en: "Agree" },             // 값 6
-  { ko: "Yes++",ja: "非常にそうだ", zh: "非常同意",  en: "Strongly Agree" },    // 값 7
+  { ko: "Mid",  ja: "分からない", zh: "不确定",     en: "Neutral" },           // 값 4
+  { ko: "Yes",  ja: "ややそうだ", zh: "有点同意",   en: "Slightly Agree" },    // 값 5
+  { ko: "Yes+", ja: "そうだ",     zh: "同意",       en: "Agree" },             // 값 6
+  { ko: "Yes++",ja: "非常にそうだ", zh: "非常同意",   en: "Strongly Agree" },    // 값 7
 ];
 
 // 버튼 값 (1~7)에 따라 CSS 클래스를 반환하는 함수 (색상 조절용)
@@ -174,11 +174,11 @@ function TestPage() {
             </div>
           </div>
 
-          <div className={styles.horizontalAnswerOptionsContainer}>
+          <div className={styles.answerOptionsContainer}> {/* 클래스 이름 변경 고려: horizontalAnswerOptionsContainer -> answerOptionsContainer */}
             {[7, 6, 5, 4, 3, 2, 1].map((value) => { // 7(Yes++) 부터 1(No++) 순서로 버튼 생성
               const label = scaleLabels[value - 1]; // scaleLabels는 0-indexed (value 1 -> index 0)
               const buttonColorClass = getButtonColorClass(value);
-              const displayButtonText = label.ko; // <br /> 태그 제거, 새 텍스트 직접 사용
+              const displayButtonText = label.ko;
 
               return (
                 <button

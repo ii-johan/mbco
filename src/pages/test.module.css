@@ -52,8 +52,7 @@
 }
 
 .questionBox h2 {
-  /* 현재 1.7em에서 30% 감소: 1.7 * 0.7 = 1.19em. 반올림하여 1.2em */
-  font-size: 1.2em; 
+  font-size: 1.44em; 
   font-weight: bold;
   color: black;
   line-height: 1.4;
@@ -62,92 +61,59 @@
   text-align: center;
 }
 
-
-/* 답변 선택 옵션 (7개 버튼) 가로 배치 컨테이너 */
-.horizontalAnswerOptionsContainer {
+/* 답변 선택 옵션 (7개 버튼) 세로 배치 컨테이너 */
+.answerOptionsContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 5px; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 10px; /* 버튼 사이 간격 (세로), 이전 15px에서 약간 줄임 */
   margin-top: 20px;
   margin-bottom: 30px;
   width: 100%;
-  max-width: 600px; 
+  max-width: 300px; 
 }
 
 /* 개별 답변 버튼 스타일 (7점 척도 디자인) */
 .answerButton {
-  border: 3px solid transparent; /* 테두리는 선택 시에만 흰색으로 변경되도록 유지 */
-  border-radius: 50%;
+  border: 3px solid transparent;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  width: 80px; 
-  height: 80px;
+  
+  /* 가로 넓이 유지, 세로 높이(두께) 40% 감소 */
+  width: 180px; 
+  height: 54px;  /* 기존 90px * 0.6 = 54px */
+  border-radius: 27px; /* 새로운 높이의 절반 */
+
   box-sizing: border-box;
   text-align: center;
-  word-break: break-word; /* "Yes++" 같은 경우 자동 줄바꿈 방지 위해 normal 고려 */
-  overflow-wrap: normal; /* 위와 동일 */
-  white-space: nowrap; /* 텍스트가 한 줄로만 표시되도록 강제 */
-  padding: 5px;
-  line-height: 1; /* 텍스트 수직 중앙 정렬에 도움 (flex justify-content가 주 역할) */
-  font-size: 0.85em; /* 새 텍스트 길이에 맞춰 조정 (기존 0.8em에서 약간 증가) */
-  font-weight: bold; /* 모든 버튼 글씨 굵게 */
+  word-break: keep-all; 
+  overflow-wrap: normal;
+  white-space: nowrap;
+  padding: 5px 10px; 
+  line-height: 1; /* 텍스트 수직 중앙 정렬 위해 line-height 조정 */
+  
+  /* 글씨 크기 조정 */
+  font-size: 1.2em; /* 기존 1.6em에서 조정 */
+  font-weight: bold;
 }
 
-/* --- 새로운 버튼 색상 및 글씨색 --- */
-
-/* Yes 계열 (Green) */
-.buttonColor7 { /* Yes++ (가장 짙은 그린) */
-  background-color: #388E3C; /* Green 700 */
-  color: white;
-  border-color: #2E7D32; /* 살짝 어두운 테두리 */
-}
-.buttonColor6 { /* Yes+ (중간 그린) */
-  background-color: #66BB6A; /* Green 400 */
-  color: black;
-  border-color: #4CAF50;
-}
-.buttonColor5 { /* Yes (연한 그린) */
-  background-color: #A5D6A7; /* Green 200 */
-  color: black;
-  border-color: #81C784;
-}
-
-/* Mid (Gray) */
-.buttonColor4 { /* Mid (진회색) */
-  background-color: #757575; /* Grey 600 */
-  color: white;
-  border-color: #616161;
-}
-
-/* No 계열 (Orange) */
-.buttonColor3 { /* No (연한 오렌지) */
-  background-color: #FFCC80; /* Orange 200 (Material) */
-  color: black;
-  border-color: #FFB74D; /* Orange 300 */
-}
-.buttonColor2 { /* No+ (중간 오렌지) */
-  background-color: #FFA726; /* Orange 400 */
-  color: black;
-  border-color: #FB8C00; /* Orange 600 */
-}
-.buttonColor1 { /* No++ (가장 짙은 오렌지) */
-  background-color: #F57C00; /* Orange 700 */
-  color: white;
-  border-color: #EF6C00; /* Orange 800 */
-}
+/* --- 새로운 버튼 색상 및 글씨색 (유지) --- */
+.buttonColor7 { background-color: #388E3C; color: white; border-color: #2E7D32; }
+.buttonColor6 { background-color: #66BB6A; color: black; border-color: #4CAF50; }
+.buttonColor5 { background-color: #A5D6A7; color: black; border-color: #81C784; }
+.buttonColor4 { background-color: #757575; color: white; border-color: #616161; }
+.buttonColor3 { background-color: #FFCC80; color: black; border-color: #FFB74D; }
+.buttonColor2 { background-color: #FFA726; color: black; border-color: #FB8C00; }
+.buttonColor1 { background-color: #F57C00; color: white; border-color: #EF6C00; }
 
 /* 선택된 버튼 스타일 */
 .answerButton.selected {
-  transform: scale(1.1);
-  border-color: white; /* 선택 시 테두리 흰색 강조 */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* 선택 시 약간의 빛 효과 */
+  transform: scale(1.05); 
+  border-color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 /* (기존 completionContainer, resultButton 등은 동일하게 유지) */
@@ -166,28 +132,28 @@
 }
 
 .completionContainer h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+ font-size: 2em;
+ margin-bottom: 20px;
 }
 
 .completionContainer p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
+ font-size: 1.1em;
+ margin-bottom: 30px;
 }
 
 .resultButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+ background-color: #007bff;
+ color: white;
+ border: none;
+ border-radius: 25px;
+ padding: 10px 20px;
+ font-size: 1em;
+ cursor: pointer;
+ transition: background-color 0.3s ease-in-out;
 }
 
 .resultButton:hover {
-  background-color: #0056b3;
+ background-color: #0056b3;
 }
 
 
@@ -207,23 +173,23 @@
     min-height: 80px;
   }
   .questionBox h2 {
-    font-size: 1.1em; /* 작은 화면 질문 폰트도 비율에 맞게 조정 */
+    font-size: 1.2em; 
     line-height: 1.3;
   }
-  .horizontalAnswerOptionsContainer {
-    gap: 3px; /* 작은 화면 버튼 간격 더 축소 */
+
+  .answerOptionsContainer { 
+    gap: 8px; /* 작은 화면 버튼 간격 더 축소 */
     margin-top: 15px;
-    max-width: 100%;
+    max-width: 100%; 
   }
+
   .answerButton {
-    /* (100% 너비 / 7개 버튼) - 양쪽 gap의 절반씩 고려 */
-    width: calc((100% / 7) - 4px); 
-    height: calc((100% / 7) - 4px); /* 원형 유지를 위해 너비와 동일하게 */
-    font-size: 0.65em; /* "Yes++"등이 들어갈 수 있도록, 화면 크기에 따라 매우 작아질 수 있음 */
-    /* 최소 크기 설정도 고려: min-width: 40px; min-height: 40px; */
-    padding: 2px;
-    line-height: 1;
-    border-width: 2px; /* 작은 버튼에 맞춰 테두리 두께도 줄임 */
+    width: 160px; 
+    height: 48px; /* 기존 80px * 0.6 = 48px */
+    border-radius: 24px; /* 새로운 높이의 절반 */
+    font-size: 1.0em; /* 기존 1.3em에서 조정 */
+    padding: 4px 8px; /* 내부 패딩 약간 축소 */
+    line-height: 1; /* 텍스트 수직 정렬 */
+    border-width: 2px;
   }
-   /* 작은 화면에서 폰트가 너무 작다면, 텍스트를 더 짧게 (Y++, M, N++) 하거나 버튼 개수를 줄이는 것이 좋습니다. */
 }
