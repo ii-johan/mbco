@@ -1,4 +1,4 @@
-/* my-embico-app/src/pages/test.module.css (구문 오류 수정: flex-direction 속성) */
+/* my-embico-app/src/pages/test.module.css (수정본) */
 
 /* 검사 페이지 전체 컨테이너 */
 .container {
@@ -13,147 +13,144 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; /* 전체 페이지 최대 너비 */
   margin: 0 auto;
 }
 
 /* 질문 영역 컨테이너 */
 .questionArea {
-    margin-bottom: 80px; /* 질문 아래 수직 간격 증가 */
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-bottom: 30px; /* 질문 아래 수직 간격 감소 (기존 80px) */
+  width: 100%;
+  max-width: 600px; /* 질문 영역 최대 너비 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .questionArea h1 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #ccc;
-    font-weight: normal;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ccc;
+  font-weight: normal;
 }
 
 /* 질문 내용 박스 스타일 (노란색 직사각형) */
 .questionBox {
-    background-color: #eaeaad;
-    color: black;
-    padding: 25px 20px;
-    border-radius: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
-    word-break: break-word;
-    overflow-wrap: break-word;
+  background-color: #eaeaad;
+  color: black;
+  padding: 25px 20px; /* 패딩 유지 또는 약간 조정 가능 */
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* 내부 h2 요소의 text-align에 영향 */
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  min-height: 100px; /* 질문 내용에 따라 높이 확보 */
 }
 
 .questionBox h2 {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: black;
-    line-height: 1.5;
-    margin: 0;
+  font-size: 1.7em; /* 폰트 크기 약간 조정 (기존 1.8em) */
+  font-weight: bold;
+  color: black;
+  line-height: 1.4; /* 줄 간격 조정 (기존 1.5) */
+  margin: 0;
+  width: 100%; /* h2가 박스 너비 전체 차지 */
+  text-align: center; /* 명시적 중앙 정렬 */
 }
 
 
 /* 답변 선택 옵션 (7개 버튼) 가로 배치 컨테이너 */
 .horizontalAnswerOptionsContainer {
-    display: flex;
-    justify-content: center; /* 가로 가운데 정렬 */
-    align-items: center; /* 세로 가운데 정렬 */
-    flex-wrap: wrap;
-    gap: 6px; /* 버튼들 사이 간격 */
-    margin-top: 80px; /* 버튼 그룹 위 수직 간격 증가 */
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 700px;
-    /* 수직 중앙보다 조금 아래에 위치시키려면, 부모 컨테이너(.container)의 justify-content를 flex-start로 하고
-       questionArea와 horizontalAnswerOptionsContainer의 margin-top/bottom으로 간격을 조절합니다. */
+  display: flex;
+  justify-content: center; /* 가로 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  flex-wrap: nowrap; /* 버튼을 한 줄에 강제 표시 */
+  gap: 5px; /* 버튼들 사이 간격 (기존 6px에서 축소) */
+  margin-top: 20px; /* 버튼 그룹 위 수직 간격 감소 (기존 80px) */
+  margin-bottom: 30px;
+  width: 100%;
+  /* (버튼 너비 80px * 7) + (갭 5px * 6) = 560px + 30px = 590px. 컨테이너는 이보다 약간 크게 설정 */
+  max-width: 600px; /* 버튼들이 들어갈 수 있는 최대 너비 (기존 700px에서 축소) */
 }
 
 /* 개별 답변 버튼 스타일 (7점 척도 디자인) */
 .answerButton {
-  /* 기본 스타일 */
-  /* background-color: #ffc107; /* 기본 노란색 배경 제거 */
-  color: black; /* 글자색 검은색 */
-  border: 3px solid transparent; /* 기본 테두리 투명 */
+  color: black;
+  border: 3px solid transparent;
   border-radius: 50%; /* 원형 */
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* 애니메이션 */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   display: flex;
-  /* **** 구문 오류 수정: flex-direction을 column으로 설정하고 잘못된 텍스트 제거 **** */
   flex-direction: column;
   justify-content: center; /* 세로 가운데 정렬 */
   align-items: center; /* 가로 가운데 정렬 */
-  flex-shrink: 0;
-  /* 고정 크기 (모든 버튼 동일) */
-  width:  90px; /* 충분한 크기 */
-  height: 90px;
+  flex-shrink: 0; /* 버튼 크기 고정 */
+  width: 80px;  /* 버튼 너비 (기존 90px에서 축소) */
+  height: 80px; /* 버튼 높이 (기존 90px에서 축소) */
   box-sizing: border-box;
   text-align: center;
-  /* 텍스트 줄바꿈 및 오버플로우 처리 */
   word-break: break-word;
   overflow-wrap: break-word;
-  padding: 10px; /* 내부 텍스트 패딩 */
-  line-height: 1.2; /* 줄 간격 */
-  font-size: 1.2em; /* 기본 글자 크기 */
+  padding: 5px; /* 내부 텍스트 패딩 (기존 10px에서 축소) */
+  line-height: 1.15; /* 줄 간격 (기존 1.2에서 미세 조정) */
+  font-size: 0.8em; /* 기본 글자 크기 (기존 1.5em에서 대폭 축소) - 약 12.8px (body 16px 기준) */
+  /* font-size를 px 값으로 고정하는 것도 고려 (예: 13px) */
 }
 
-/* 버튼 색상 클래스 (value 7부터 1까지) */
+/* 버튼 색상 클래스 (기존 유지) */
 .buttonColor7 { /* 매우 그렇다 (진한 초록) */
     background-color: #8ce38c;
     border-color: #080808;
-    color: black; /* 글자색 흰색 */
+    color: black;
     font-weight: bold;
 }
 .buttonColor6 { /* 그렇다 (초록) */
     background-color: #8ce38c;
     border-color: #141414;
-     color: black;
-     font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 .buttonColor5 { /* 조금 그렇다 (연한 초록) */
     background-color: #8ce38c;
     border-color: #0d0e0d;
-     color: black; /* 글자색 검은색 */
-      font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 .buttonColor4 { /* 모르겠다 (회색) */
     background-color: #5e6263;
     border-color: #0e0e0e;
-     color: white;
-     font-weight: bold;
+    color: white;
+    font-weight: bold;
 }
 .buttonColor3 { /* 조금 아니다 (연한 주황) */
     background-color: #eac797;
     border-color: #0b0b0b;
-     color: black;
-     font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 .buttonColor2 { /* 아니다 (주황) */
     background-color: #eac797;
     border-color: hsl(0, 0%, 1%);
-     color: black;
-     font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 .buttonColor1 { /* 매우 아니다 (진한 주황) */
     background-color: #eac797;
     border-color: #0d0d0d;
-     color: black;
+    color: black;
     font-weight: bold;
 }
 
-
 /* 선택된 버튼 스타일 */
 .answerButton.selected {
-    transform: scale(1.1);
-    border-color: white; /* 선택 시 테두리 흰색 */
+  transform: scale(1.1);
+  border-color: white; /* 선택 시 테두리 흰색 */
 }
 
-/* 검사 완료/오류 등 메시지 컨테이너 */
+/* 검사 완료/오류 등 메시지 컨테이너 (기존 유지) */
 .completionContainer {
   display: flex;
   flex-direction: column;
@@ -169,75 +166,97 @@
 }
 
 .completionContainer h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .completionContainer p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
+  font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
-/* 검사 완료 후 결과 보기 버튼 등 */
+/* 검사 완료 후 결과 보기 버튼 등 (기존 유지) */
 .resultButton {
-   background-color: #007bff;
-   color: white;
-   border: none;
-   border-radius: 25px;
-   padding: 10px 20px;
-   font-size: 1em;
-   cursor: pointer;
-   transition: background-color 0.3s ease-in-out;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .resultButton:hover {
-   background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 
 /* 스마트폰 등 작은 화면을 위한 반응형 디자인 */
 @media (max-width: 600px) {
-    .container {
-        padding: 20px 10px;
-    }
+  .container {
+    padding: 20px 10px;
+  }
 
-    .questionArea {
-        margin-bottom: 50px;
-    }
+  .questionArea {
+    margin-bottom: 20px; /* 작은 화면 간격 조정 */
+  }
 
-     .questionArea h1 {
-        font-size: 1.3em;
-     }
+  .questionArea h1 {
+    font-size: 1.3em;
+  }
 
-    .questionBox {
-        padding: 20px 15px;
-    }
+  .questionBox {
+    padding: 20px 15px;
+    min-height: 80px; /* 작은 화면 질문 박스 최소 높이 */
+  }
 
-    .questionBox h2 {
-        font-size: 1.6em;
-    }
+  .questionBox h2 {
+    font-size: 1.5em; /* 작은 화면 질문 폰트 (기존 1.6em) */
+    line-height: 1.3;
+  }
+
+  .horizontalAnswerOptionsContainer {
+    gap: 4px; /* 작은 화면 버튼 간격 (기존 8px) */
+    margin-top: 15px; /* 작은 화면 간격 조정 */
+    max-width: 100%; /* 화면 너비에 맞춤 */
+    /* flex-wrap: wrap; /* 작은 화면에서는 공간 부족 시 줄바꿈 허용 고려 */
+  }
+
+  /* 작은 화면 버튼 크기 조정 */
+  .answerButton {
+    width: calc((100% / 7) - 4px - 1px); /* 7개 버튼이 한 줄에 꽉 차도록 계산 (gap 고려, border 오차 고려) */
+    /* width: 65px; /* 고정 크기 대신 위처럼 계산하거나, 좀 더 작은 고정값 */
+    height: 65px; /* 높이도 너비에 맞춰 조정하거나 고정값 */
+    font-size: 0.65em; /* 작은 화면 버튼 폰트 (기존 0.9em) - 약 10.4px */
+    /* font-size: 11px; */
+    padding: 3px;
+    line-height: 1.1;
+  }
+
+  /* 만약 작은 화면에서 7개 버튼이 한 줄에 너무 작다면, 아래처럼 개수를 줄이고 wrap 처리 */
+  /*
+  .horizontalAnswerOptionsContainer {
+      flex-wrap: wrap;
+      justify-content: space-around; / 버튼을 공간에 분산
+  }
+  .answerButton {
+      width: 80px; / 더 큰 버튼 크기
+      height: 80px;
+      font-size: 0.8em;
+      margin-bottom: 10px; / 줄바꿈 시 하단 마진
+  }
+  */
 
 
-    .horizontalAnswerOptionsContainer {
-        gap: 8px;
-        margin-top: 50px;
-    }
-
-    /* 작은 화면 버튼 크기 조정 */
-    .answerButton {
-        width: 90px;
-        height: 90px;
-        font-size: 0.9em;
-    }
-
-    .completionContainer h1 {
-        font-size: 1.8em;
-    }
-    .completionContainer p {
-        font-size: 1em;
-    }
-     .resultButton {
-        padding: 8px 16px;
-        font-size: 0.9em;
-    }
+  .completionContainer h1 {
+    font-size: 1.8em;
+  }
+  .completionContainer p {
+    font-size: 1em;
+  }
+  .resultButton {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
 }
