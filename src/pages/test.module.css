@@ -99,7 +99,7 @@
   overflow-wrap: break-word;
   padding: 10px; /* 내부 텍스트 패딩 */
   line-height: 1.2; /* 줄 간격 */
-  font-size: 1.5em; /* 기본 글자 크기 */
+  font-size: 1.2em; /* 기본 글자 크기 */
 }
 
 /* 버튼 색상 클래스 (value 7부터 1까지) */

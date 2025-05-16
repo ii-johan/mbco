@@ -377,7 +377,7 @@ function TestPage() {
                   } else if (buttonTextKo === "약간 그렇다") {
                        displayButtonText = (
                           <>
-                              약간 <br /> 그렇다
+                              조금 <br /> 그렇다
                           </>
                        );
                   } else if (buttonTextKo === "모르겠다") {
@@ -389,7 +389,7 @@ function TestPage() {
                   } else if (buttonTextKo === "약간 아니다") {
                        displayButtonText = (
                           <>
-                              약간 <br /> 아니다
+                              조금 <br /> 아니다
                           </>
                        );
                   } else if (buttonTextKo === "매우 아니다") {
