@@ -392,7 +392,7 @@ export const testQuestions: Question[] = [
   },
   {
     id: 38,
-    text_ko: "나는 꿈을 꾸면 꿈에 대한 해석에 푹 빠진다다.",
+    text_ko: "나는 꿈을 꾸면 그 꿈에 대한 해석에 푹 빠질 때가 많다.",
     text_ja: "他の人の意見や評価は、あまり気にしない。",
     text_zh: "你不太在意别人的意见或评价。",
     text_en: "You do not care much about other people's opinions or evaluations.",
