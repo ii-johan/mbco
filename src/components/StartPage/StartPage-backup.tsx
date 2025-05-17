@@ -1,4 +1,4 @@
-// my-embico-app/src/components/StartPage/StartPage.tsx (수정본)
+// my-embico-app/src/components/StartPage/StartPage.tsx
 
 import React from 'react';
 import styles from './StartPage.module.css'; // CSS 모듈 임포트
@@ -23,6 +23,14 @@ function StartPage() {
     console.log("Full Test 버튼 클릭됨. /test?length=72 로 이동");
   };
 
+  // TODO: 에니어그램 테스트 버튼 클릭 시 실행될 핸들러 함수 (다음 단계에서 구현)
+  const handleEnneagramTestStart = () => {
+    // 현재는 임시 로그만 출력합니다.
+    // router.push('/enneagram-test'); // 예시: 에니어그램 테스트 페이지 경로
+    console.log("Enneagram Test 버튼 클릭됨.");
+  };
+
+
   // 사용자 로고를 표시하는 컴포넌트 (현재는 임시 플레이스홀더)
   const UserLogo = () => (
     <div className={styles.logo}>
@@ -41,8 +49,8 @@ function StartPage() {
 
       {/* 제목 영역 */}
       <div className={styles.title}>
-        {/* 메인 타이틀 텍스트 */}
-        <h1>EMCO TEST</h1>
+        {/* 메인 타이틀 텍스트 수정 */}
+        <h1>MBCO TEST</h1>
         {/* 부제목 텍스트 */}
         <p>MBTI+HEXACO</p>
       </div>
@@ -56,6 +64,11 @@ function StartPage() {
         {/* Full Test 시작 버튼 */}
         <button className={styles.startButton} onClick={handleFullTestStart}>
           Full Test (72문항)
+        </button>
+        {/* Enneagram Test 시작 버튼 추가 */}
+        {/* TODO: onClick 핸들러 추가 및 경로 설정 (다음 단계) */}
+        <button className={styles.startButton} onClick={handleEnneagramTestStart}>
+          Enneagram Test (90 문항)
         </button>
       </div>
 

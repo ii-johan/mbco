@@ -1,6 +1,7 @@
-// my-embico-app/src/pages/index.tsx
+// my-embico-app/src/pages/index.tsx 파일에서 StartPage 컴포넌트 임포트 경로 수정
 
 import Head from 'next/head'; // Next.js의 Head 컴포넌트 임포트
+// StartPage 컴포넌트 임포트 경로 수정: '../src/components/StartPage/StartPage' -> '../components/StartPage/StartPage'
 import StartPage from '../components/StartPage/StartPage'; // StartPage 컴포넌트 임포트
 import React from 'react'; // React 임포트 (JSX 사용을 위해 필요)
 
