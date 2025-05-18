@@ -62,15 +62,15 @@ function StartPage() {
       <div className={styles.startButtonArea}>
         {/* Fast Test 시작 버튼 */}
         <button className={styles.startButton} onClick={handleFastTestStart}>
-          Fast Test (36문항)
+          Fast MBCO (36문항)
         </button>
         {/* Full Test 시작 버튼 */}
         <button className={styles.startButton} onClick={handleFullTestStart}>
-          Full Test (72문항)
+          Full MBCO (72문항)
         </button>
         {/* Enneagram Test 시작 버튼 추가 및 onClick 핸들러 연결 */}
         <button className={styles.startButton} onClick={handleEnneagramTestStart}>
-          Enneagram Test (90 문항)
+          Enneagram (90 문항)
         </button>
       </div>
 

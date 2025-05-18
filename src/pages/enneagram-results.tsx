@@ -227,7 +227,7 @@ function EnneagramResultsPage() {
             {/* 기본 유형 정보 표시 */}
             {primaryType !== null && (
                  <> {/* 기본 유형 관련 정보를 그룹화 */}
-                    <p><strong>당신의 기본유형(Primary Type)은 {primaryType}번({primaryTypeName_ko})입니다.</strong></p>
+                    <p><strong>기본유형(Primary Type)은 {primaryType}번({primaryTypeName_ko})입니다.</strong></p>
                     {/* 기본 유형 일반 설명 표시 (데이터가 있을 경우) */}
                     {primaryTypeInfo && <p>{primaryTypeGeneralDescription_ko}</p>}
                     {/* TODO: 필요하다면 기본 유형의 핵심 동기, 두려움 등 상세 설명 추가 */}
@@ -237,7 +237,7 @@ function EnneagramResultsPage() {
             {/* 날개 유형 정보 표시 */}
             {wingType !== null && (
                  <> {/* 날개 유형 관련 정보를 그룹화 */}
-                    <p><strong>당신의 날개유형(Wing Type)은 {wingType}번입니다.</strong></p>
+                    <p><strong>날개유형(Wing Type)은 {wingType}번입니다.</strong></p>
                     {/* 날개 조합 설명 표시 (데이터가 있을 경우) */}
                     {wingInfo && <p>{wingDescription_ko}</p>}
                     {/* TODO: 필요하다면 날개 유형의 특징 등 상세 설명 추가 */}
@@ -247,7 +247,7 @@ function EnneagramResultsPage() {
             {/* 성격 건강 수준 정보 표시 */}
              {developmentLevel && (
                 <> {/* 건강 수준 관련 정보를 그룹화 */}
-                   <p><strong>당신의 성격건강수준(Level of Development)은 {developmentLevel}({developmentLevel === 'Average' ? '보통' : '판별 로직 필요'})입니다.</strong></p> {/* 임시 표시 */}
+                   <p><strong>성격건강(Level of Development)은 {developmentLevel}({developmentLevel === 'Average' ? '보통' : '판별 로직 필요'})입니다.</strong></p> {/* 임시 표시 */}
                    {/* TODO: 성격 건강 수준별 상세 설명 표시 (별도 데이터 및 로직 필요) */}
                 </>
              )}

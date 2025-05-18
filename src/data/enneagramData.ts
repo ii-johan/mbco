@@ -142,7 +142,7 @@ export const enneagramQuestions: EnneagramQuestion[] = [
   },
   {
     id: 19,
-    text_ko: "감정적으로 친근하게 다가오는는 사람은 부담스럽다.",
+    text_ko: "감정적으로 친근하게 다가오는 사람은 부담스럽다.",
     // 탐구주의자 - 5번 유형 긍정 반영
     // 참고: 이 문항의 의도에 따라 polarity가 'negative'일 수도 있습니다.
     scoring: [{ type: 5, polarity: 'positive' }],
