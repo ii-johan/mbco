@@ -20,7 +20,7 @@
 
 /* "My Enneagram Type?" 메인 타이틀 스타일 */
 .mainTitle {
-    font-size: 1.5em; /* 적당히 큰 글자 크기 */
+    font-size: 1.3em; /* 적당히 큰 글자 크기 */
     font-weight: bold; /* 글자 두께 볼드 */
     color: #fef8e4; /* 밝은 노란색 계열 색상 */
     margin-bottom: 25px; /* 아래 여백 */
